@@ -7,7 +7,7 @@ test.describe('Verify article', () => {
     async ({ articlePage }) => {
       await articlePage.goto('?id=1');
 
-      await expect(articlePage.articleTitle).toHaveText('string');
+      await expect(articlePage.articleTitle).toHaveText('How to write effective test cases');
     },
   );
 });
