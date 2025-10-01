@@ -1,0 +1,44 @@
+{
+  "name": "playwrightframeworkcourse",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "check": "npm run format && npm run lint && npm run tsc:check",
+    "format": "npx prettier --write .",
+    "format:check": "npx prettier . --check \"!**.ts\"",
+    "lint": "npx eslint . --max-warnings=0",
+    "tsc:check": "npx tsc --noEmit --pretty --strict",
+    "test": "npx playwright test",
+    "test:headed": "npm run test -- --headed",
+    "test:ui-mode": "npm run test -- --ui",
+    "show-report": "npx playwright show-report",
+    "test:tag": "npx playwright test --grep \"@GAD-R01-01|@GAD-R01-02\"",
+    "prepare": "husky"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.dbcloud.vip/dorian/PlaywrightFrameworkCourse.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@eslint/js": "^9.34.0",
+    "@faker-js/faker": "^9.9.0",
+    "@playwright/test": "^1.55.0",
+    "@trivago/prettier-plugin-sort-imports": "^5.2.2",
+    "@types/node": "^24.3.0",
+    "dotenv": "^17.2.1",
+    "eslint": "^9.33.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-playwright": "^2.2.2",
+    "eslint-plugin-prettier": "^5.5.4",
+    "globals": "^16.3.0",
+    "husky": "^9.1.7",
+    "jiti": "^2.5.1",
+    "prettier": "^3.6.2",
+    "typescript-eslint": "^8.40.0"
+  }
+}
