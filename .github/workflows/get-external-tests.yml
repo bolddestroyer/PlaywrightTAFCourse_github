@@ -30,6 +30,7 @@ jobs:
         working-directory: ./app
         run: npm i
 
+
       - name: 🚀 Start the application
         working-directory: ./app
         run: |
@@ -44,11 +45,9 @@ jobs:
       - name: Install test dependencies
         run: |
           npm i
-
       - name: Install Playwright Browsers
         run: |
           npx playwright install --with-deps chromium
-
       - name: Run Playwright tests
         env:
           BASE_URL: ${{ vars.BASE_URL }}
